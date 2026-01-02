@@ -1,0 +1,48 @@
+body{
+  margin:0;
+  font-family:Arial, Helvetica, sans-serif;
+  background:#1e88e5;
+  color:white;
+}
+
+header{
+  background:#1565c0;
+  padding:15px;
+  position:sticky;
+  top:0;
+}
+
+.brand{
+  color:#ff69b4;
+  font-weight:bold;
+  font-size:20px;
+}
+
+.container{
+  padding:20px;
+  max-width:900px;
+  margin:auto;
+  background:#ffffff;
+  color:#000;
+  border-radius:10px;
+}
+
+.question{
+  margin-bottom:20px;
+}
+
+button{
+  padding:12px 20px;
+  font-size:16px;
+  background:#1e88e5;
+  color:white;
+  border:none;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+.result{
+  margin-top:20px;
+  font-size:20px;
+  font-weight:bold;
+}

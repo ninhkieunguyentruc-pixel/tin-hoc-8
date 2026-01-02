@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tin học 8</title>
+<link rel="stylesheet" href="style.css">
+<script src="data.js"></script>
+</head>
+
+<body>
+
+<header>
+  <div class="brand">ninh kiều</div>
+</header>
+
+<div class="container">
+  <h2>Trắc nghiệm Tin học 8</h2>
+  <div id="quiz"></div>
+  <button onclick="submitQuiz()">NỘP BÀI</button>
+  <h3 id="result"></h3>
+</div>
+
+<script>
+const quiz = document.getElementById("quiz");
+
+questions.forEach((q,i)=>{
+  let html = `<p><b>Câu ${i+1}:</b> ${q.q}</p>`;
+  q.a.forEach((opt,j)=>{
+    html += `<label>
+      <input type="radio" name="q${i}" value="${j}"> ${opt}
+    </label><br>`;
+  });
+  quiz.innerHTML += html;
+});
+
+function submitQuiz(){
+  let correct = 0;
+  questions.forEach((q,i)=>{
+    let ch = document.querySelector(`input[name=q${i}]:checked`);
+    if(ch && Number(ch.value) === q.c) correct++;
+  });
+  document.getElementById("result").innerText =
+    "Số câu đúng: " + correct + " / " + questions.length;
+}
+</script>
+
+</body>
+</html>
